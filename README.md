@@ -74,7 +74,7 @@ Le fichier CSV ne contient ainsi plus que 5 colonnes :
 * Titre
 * Éditeur
 * ISBN
-* URL de l'éditeur
+* URL
 
 #### sendemail.php
 
@@ -88,11 +88,15 @@ Le script PHP qui permet de tester le formulaire sans envoyer le mail.
 
 Le script PHP qui redirige les spam bots s'ils ont rempli le *[honeypot](https://www.smartfile.com/blog/captchas-dont-work-how-to-trick-spam-bots-with-a-smarter-honey-pot/)*
 
-### Prérequis
-
-En local ou en production, nécessite un environnement web prenant en charge une version récente de PHP. Pour mettre en place un environnement de développement web simplement et rapidement voir [XAMPP](https://www.apachefriends.org/index.html).
-
 ### Visualisation des résultats
 
 * Mettre les fichiers à la racine du serveur
 * Pointer sur l'adresse url par exemple **http://localhost/index.php**
+
+## Prérequis
+
+En local ou en production, nécessite un environnement web prenant en charge une version récente de PHP. Pour mettre en place un environnement de développement web simplement et rapidement voir [XAMPP](https://www.apachefriends.org/index.html).
+
+## Demo
+
+<https://libracine.ch/acquisition>.
