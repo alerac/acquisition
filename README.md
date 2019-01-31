@@ -25,7 +25,7 @@ Réalisation du script **Alexandre Racine**
 
 ## Fonctionnement
 
-###index.php 
+### index.php 
 
   prend en entrée le fichier CSV **collection_exemple.csv** présent dans le dossier **files** et exporté depuis Zotero.
   Il prend les données de la ligne de référence et génère ensuite un formulaire avec check box à cocher pour 
@@ -35,32 +35,32 @@ Réalisation du script **Alexandre Racine**
   dans le navigateur pour débugger. A enlever absolument une fois le script terminé et en production pour des
   raisons de sécurité.
 
-###Dossier "assets" 
+### Dossier "assets" 
 
   Comprend tous les éléments CSS, JS, Mail et images nécessaires
 
-####phpmailer
+#### phpmailer
 
 Module nécessaire pour l'envoi du mail. Normalement déjà préinstallé dans le cadre de ce projet. En cas de problème, si une réinstallation est nécessaire, se référer à <https://github.com/PHPMailer/PHPMailer/blob/master/README.md> 
 
-####CSS
+#### CSS
 
 Fichiers CSS du framework foundation <https://foundation.zurb.com/> + CSS local **acquisition.css**
 
-####JS
+#### JS
 
 Comprend le code **Javascript** du framework foundation.
 
-####images
+#### images
 
 Jolie image vers laquelle sont redirigés les spams bots s'ils remplissent le *[honeypot](https://www.smartfile.com/blog/captchas-dont-work-how-to-trick-spam-bots-with-a-smarter-honey-pot/)*
   
 
-###Dossier "files"
+### Dossier "files"
 
 Comprend les fichiers du formulaire
 
-####collection_exemple.csv
+#### collection_exemple.csv
 
 Collection test exportée depuis Zotero en format CSV. Contient toutes les références ligne par ligne.  
 
@@ -76,19 +76,19 @@ Le fichier CSV ne contient ainsi plus que 5 colonnes :
 * ISBN
 * URL de l'éditeur
 
-####sendemail.php
+#### sendemail.php
 
 Le script PHP qui se charge de traiter les données et d'envoyer le mail.
 
-####test.php
+#### test.php
 
 Le script PHP qui permet de tester le formulaire sans envoyer le mail.
 
-####bot.php
+#### bot.php
 
 Le script PHP qui redirige les spam bots s'ils ont rempli le *[honeypot](https://www.smartfile.com/blog/captchas-dont-work-how-to-trick-spam-bots-with-a-smarter-honey-pot/)*
 
-###Prérequis
+### Prérequis
 
 En local ou en production, nécessite un environnement web prenant en charge une version récente de PHP. Pour mettre en place un environnement de développement web simplement et rapidement voir [XAMPP](https://www.apachefriends.org/index.html).
 
