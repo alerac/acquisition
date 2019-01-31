@@ -1,0 +1,68 @@
+/*.ref {
+	margin-top: 1em;
+}*/
+
+form {
+	max-width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.error {
+	margin-left: 1em;
+	margin-top: 1em;
+}
+
+.recap {
+	margin-left: 1em;
+	margin-top: 1em;
+}
+
+input[type=submit] {
+	width: 20%;
+	line-height: 2.2em;
+}
+
+.button {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+label [type="checkbox"] {
+	margin-top: 0.5em;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+  color: #8b7373;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #8b7373;
+}
+
+.topbottom .button {
+	float: right;
+	margin-top: -5.2em;
+	line-height: 2.2em;
+}
+
+.topbottom .button a {
+	color: white;
+}
+
+ul {
+	margin-left: 0rem;
+}
+
+li {
+	list-style: none;
+}
+
+.errors {
+	color: red;
+	font-weight: bolder;
+}
+
+.bot {
+	display: none;
+}
