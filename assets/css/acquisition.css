@@ -21,6 +21,8 @@ form {
 input[type=submit] {
 	width: 20%;
 	line-height: 2.2em;
+	float: right;
+	margin-top: -5.3em;
 }
 
 .button {
@@ -40,13 +42,13 @@ label [type="checkbox"] {
   color: #8b7373;
 }
 
-.topbottom .button {
+.gobottom .button {
 	float: right;
 	margin-top: -5.2em;
 	line-height: 2.2em;
 }
 
-.topbottom .button a {
+.gobottom .button a {
 	color: white;
 }
 
@@ -65,4 +67,17 @@ li {
 
 .bot {
 	display: none;
+}
+
+@media only screen and (max-width: 769px) {
+
+	.bottom .button {
+		display: block;
+		margin-top: 1em;
+		width: 100%;
+	}
+
+	.gobottom {
+		display: none;
+	}
 }

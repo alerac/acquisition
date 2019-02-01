@@ -74,7 +74,7 @@ echo '<li>';
 echo '<label class="button"><input type="checkbox" class="checkall"> Tout sélectionner / déselectionner</label>';
 echo '</li>';
 echo '<li>';
-echo '<div class="topbottom">';
+echo '<div class="gobottom">';
 echo '<div class="button"><a href="#bottom">Aller à la fin du formulaire</a></div>';
 echo '</li>';
 echo '</ul>';
@@ -164,16 +164,17 @@ while (($line = fgetcsv($file)) !== FALSE) {
   toutes les références au fond du formulaire. Le bouton "Envoyer" transfert les
   données dans le fichier sendemail.php*/
 
-echo '<div id="bottom"></div>';
+echo '<div id="bottom" class="bottom">';
 echo '<br />';
 echo '<ul>';
 echo '<li>';
-echo '<input class="button" type="submit">';
+echo '<div class="SelectAllBottom"><label class="button"><input type="checkbox" class="checkall"> Tout sélectionner / déselectionner</label></div>';
 echo '</li>';
 echo '<li>';
-echo '<div class="topbottom"><label class="button"><input type="checkbox" class="checkall"> Tout sélectionner / déselectionner</label></div>';
+echo '<input class="button" type="submit">';
 echo '</li>';
 echo '</ul>';
+echo '</div>';
 echo '</fieldset>';
 echo '</form>';
 
