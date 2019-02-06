@@ -68,9 +68,11 @@ Cet export est fait grâce à un export CSV custom (**fichier CSV_custom.js**) �
 
 Pour plus d'information à ce sujet voir <https://forums.zotero.org/discussion/41927/export-collection-in-csv-format-how-to-get-rid-of-superfluous-columns>  
 
-Le fichier CSV ne contient ainsi plus que 5 colonnes :  
+Le fichier CSV ne contient ainsi plus que 7 colonnes :  
 
 * Auteur
+* Directeur (si existant)
+* Directeur de collection (si existant)
 * Titre
 * Éditeur
 * ISBN

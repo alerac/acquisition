@@ -103,17 +103,27 @@ while (($line = fgetcsv($file)) !== FALSE) {
 	if (empty($line[0])) {
 		$line[0] = "Pas d'auteur";
 	}
-	if (empty($line[1])) {
-		$line[1] = "Pas de titre";
-	}
-	if (empty($line[2])) {
-		$line[2] = "Pas d'éditeur";
-	}
 	if (empty($line[3])) {
-		$line[3] = "Pas d'ISBN";
+		$line[3] = "Pas de titre";
 	}
 	if (empty($line[4])) {
-		$line[4] = "Pas d'URL";
+		$line[4] = "Pas d'éditeur";
+	}
+	if (empty($line[5])) {
+		$line[5] = "Pas d'ISBN";
+	}
+	if (empty($line[6])) {
+		$line[6] = "Pas d'URL";
+	}
+
+	/*On prend en compte les métadonnées "Directeur" et "Directeur de collection"
+	  si elles existent*/
+
+	if (!empty($line[1])) {
+		$line[0] = $line[0].' ; <strong>Directeur :</strong> '.$line[1];
+	}
+	if (!empty($line[2])) {
+		$line[0] = $line[0].' ; <strong>Directeur de collection :</strong> '.$line[2];
 	}
 
 	/*On incrémente le marqueur pour en assigner un unique à chaque
@@ -126,19 +136,17 @@ while (($line = fgetcsv($file)) !== FALSE) {
 	  pour chaque référence.*/
 
 	echo '<div class="ref">';
-	echo '<p>Titre : <input type="text" name="titre" value="'.$line[1].'" readonly></p>';
-	echo '<p>Auteur : <input type="text" name="auteur" value="'.$line[0].'" readonly></p>';
-	echo '<p>Éditeur : <input type="text" name="editeur" value="'.$line[2].'" readonly></p>';
-	echo '<p hidden>ISBN : <input type="text" name="isbn" value="'.$line[3].'" readonly></p>';
-	echo '<p hidden>URL : <input type="url" name="url" value="'.$line[4].'" readonly></p>';
+	echo '<h5><a href="'.$line[6].'" target="_blank">'.$line[3].'</a></h5>';
+	echo '<p><strong>Auteur :</strong> '.$line[0].'</p>';
+	echo '<p><strong>Éditeur :</strong> '.$line[4].'</p>';
 	
 	//Si l'URL n'est pas présente on ne l'affiche pas sous forme de lien
 
-	if ($line[4] == "Pas d'URL") {
-		echo '<p>'.$line[4].'</p>';
+	if ($line[6] == "Pas d'URL") {
+		echo '<p>'.$line[6].'</p>';
 	}
 	else {
-		echo '<p><a href="'.$line[4].'" target="_blank">'.$line[4].'</a></p>';
+		echo '<p><a href="'.$line[6].'" target="_blank">'.$line[6].'</a></p>';
 	}
 
 	/*On ajoute un champ de commentaire libre et on le tague avec
@@ -154,7 +162,7 @@ while (($line = fgetcsv($file)) !== FALSE) {
 	  traiter chaque référence individuellement dans le fichier sendemail.php
 	  On tague la référence avec le marqueur défini (correspond au commentaire)*/
 
-	echo '<label class="button"><input type="checkbox" name="reference[]" value="'.$line[1].'_'.$line[0].'_'.$line[2].'_'.$line[3].'_'.$line[4].'_'.$KeyRefNumber.'" /> Sélectionner</label>';
+	echo '<label class="button"><input type="checkbox" name="reference[]" value="'.$line[3].'_'.$line[0].'_'.$line[4].'_'.$line[5].'_'.$line[6].'_'.$KeyRefNumber.'" /> Sélectionner</label>';
 	echo '</div>';
 	echo '<hr>';
 }

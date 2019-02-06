@@ -52,7 +52,7 @@ var recordDelimiter = "\n",
 // Exported columns in order of export
 var exportedFields = [
 	// "Important" metadata
-	"creators/author","title","publisher","ISBN","url"
+	"creators/author","creators/editor","creators/seriesEditor","title","publisher","ISBN","url"
 ];
 
 // Creators that should map to base type
